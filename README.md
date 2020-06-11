@@ -33,7 +33,12 @@ Lastly, the secure url will be used to call the GET method: -
 ![](images/5.png)
 
 # Sequence Diagrams
+### 1. Unsecure Talent Search Web API
+![](images/sd.png)
 
+### 2. Secure Talent Search Web API
+![](images/sd2.png)
+Note: RequireHttpsAttribute class overwrite AuthorizationFilterAttribute class as implementing if else statement to detect if the url is http or https.
 
 # References:
 1. https://www.youtube.com/watch?v=xIzlD-frEw4&t=183s
