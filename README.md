@@ -7,5 +7,9 @@ Pang Jing Hui | P1845259
 | 1. | GET | api/talents | Retrieve all the data.  |
 | 2. | GET | api/talents/{id:int} | Retrieve data based on id. Route constraints let you restrict how the parameters in the route template are matched. The general syntax is "{parameter:constraint}". |
 
-# XML Output:
-![](images/postman-xml.png)
+# Postman testing screenshots:
+### Get all of the talents
+![](images/1.png)
+
+### Get the talent by input id
+![](images/2.png)
