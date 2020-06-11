@@ -14,4 +14,25 @@ Pang Jing Hui | P1845259
 ### 2. GET - Retrieve talent by id
 ![](images/2.png)
 
-# 
+# HTTP to HTTPS testing screenshots:
+### I. Access unsecure url
+![](images/3.png)
+Try to access unsecure http://...
+
+### II. Automatically redirected to secure url
+![](images/4.png)
+Notice it has been redirected to https://...
+
+## Inspect
+![](images/5.png)
+There are 2 talents methods called. 
+This method get the unsecure url and return a secure url as shown below: -
+![](images/6.png)
+
+Lastly, the secure url will be used to call the GET method: -
+![](images/5.png)
+
+References:
+https://www.youtube.com/watch?v=xIzlD-frEw4&t=183s
+https://www.hexacta.com/How-to-enable-CORS-on-your-Web-API
+
