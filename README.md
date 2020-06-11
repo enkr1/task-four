@@ -33,6 +33,6 @@ Lastly, the secure url will be used to call the GET method: -
 ![](images/5.png)
 
 References:
-https://www.youtube.com/watch?v=xIzlD-frEw4&t=183s
-https://www.hexacta.com/How-to-enable-CORS-on-your-Web-API
+1. https://www.youtube.com/watch?v=xIzlD-frEw4&t=183s
+2. https://www.hexacta.com/How-to-enable-CORS-on-your-Web-API
 
