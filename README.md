@@ -32,6 +32,9 @@ This method get the unsecure url and return a secure url as shown below: -
 Lastly, the secure url will be used to call the GET method: -
 ![](images/5.png)
 
+# Sequence Diagrams
+
+
 # References:
 1. https://www.youtube.com/watch?v=xIzlD-frEw4&t=183s
 2. https://www.hexacta.com/How-to-enable-CORS-on-your-Web-API
