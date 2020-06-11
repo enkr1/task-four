@@ -41,6 +41,6 @@ Lastly, the secure url will be used to call the GET method: -
 Note: RequireHttpsAttribute class overwrite AuthorizationFilterAttribute class as implementing if else statement to detect if the url is http or https.
 
 # References:
-1. https://www.youtube.com/watch?v=xIzlD-frEw4&t=183s
+1. https://www.youtube.com/watch?v=xIzlD-frEw4
 2. https://www.hexacta.com/How-to-enable-CORS-on-your-Web-API
 
