@@ -7,6 +7,7 @@ using System.Web;
 using System.Web.Http.Controllers;
 using System.Web.Http.Filters;
 
+//learned from https://www.youtube.com/watch?v=xIzlD-frEw4&t=183s
 namespace Task4
 {
     public class RequireHttpsAttribute : AuthorizationFilterAttribute
