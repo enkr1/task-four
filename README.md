@@ -32,6 +32,15 @@ This method get the unsecure url and return a secure url as shown below: -
 Lastly, the secure url will be used to call the GET method: -
 ![](images/5.png)
 
+# Network failure catch:
+## 1. Online
+![](images/n1.png)
+Console shows the message, "Online, status:: true", when the network is connected. 
+
+## 2. Offline
+![](images/n2.png)
+The "Retry" button will be showned to refresh the page and prompt user to check the network connectivity.
+
 # Sequence Diagrams
 ### 1. Unsecure Talent Search Web API
 ![](images/sd.jpeg)
