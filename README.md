@@ -33,14 +33,14 @@ Lastly, the secure url will be used to call the GET method: -
 ![](images/5.png)
 
 # Network failure catch:
-## 1. Online
+## 1. Network failed
 ![](images/n1.png)
-For debugging purpose, console shows the message, "Online, status: true", when the network is connected. 
+For debugging purpose, console will show the message, "Event: Offline; Status: offline", when the network is disconnected. 
+The "Offline" message will be shown on top and the "Retry" button will be showned at the top right for user to refresh the browser.
 
-## 2. Offline
+## 2. Network reconnected
 ![](images/n2.png)
-The "Retry" button will be showned at the top right for user to refresh the browser, and a pop-up message prompts user to check the network connectivity. 
-The console shows, "Offline: status: false".
+The "Online" message will be shown on top and the "Retry" button will disappear.
 
 # Sequence Diagrams
 ### 1. Unsecure Talent Search Web API
@@ -53,4 +53,4 @@ Note: RequireHttpsAttribute class overwrite AuthorizationFilterAttribute class a
 # References:
 1. https://www.youtube.com/watch?v=xIzlD-frEw4
 2. https://www.hexacta.com/How-to-enable-CORS-on-your-Web-API
-
+3. https://developer.mozilla.org/en-US/docs/Web/API/NavigatorOnLine/Online_and_offline_events
