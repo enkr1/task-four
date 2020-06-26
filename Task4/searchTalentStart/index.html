@@ -6,6 +6,7 @@
 	<link rel="stylesheet" href="mystyle.css" />
 </head>
 <body>
+    <div id="status"></div>
     <button id="retryBtn" onclick="retryConnect()">RETRY</button>
     <div id="searcharea">
         <label for="search">live search</label>
@@ -19,10 +20,30 @@
 </html>
 
 <style>
+    body {
+        padding: 0;
+        margin: 0;
+    }
     #retryBtn {
         position: absolute;
         right: 1%;
         color: red;
+        visibility: hidden;
+    }
+    #status {
+        position: relative;
+        width: 100%;
+        color: #FFF;
+        text-align: center;
+        margin-bottom: .5rem;
+    }
+
+    .online {
+        background: green;
+    }
+
+    .offline {
+        background: red;
     }
 </style>
 
@@ -31,28 +52,52 @@
     // https://stackoverflow.com/questions/189430/detect-the-internet-connection-is-offline
     // https://www.w3schools.com/howto/howto_js_offline_detection.asp
     
-    function checkNetwork() {
-        var status = navigator.onLine;
-        if (status) {
-            console.log("Online, status: " + status);
-            document.getElementById("retryBtn").style.visibility = "hidden";
-        } else {
-            console.log("Offline, status: " + status);
-            alert('Please check your network connectivity!');
-            document.getElementById("retryBtn").style.visibility = "visible";
+    //function checkNetwork() {
+    //    var status = navigator.onLine;
+    //    if (status) {
+    //        console.log("Online, status: " + status);
+    //        document.getElementById("retryBtn").style.visibility = "hidden";
+    //    } else {
+    //        console.log("Offline, status: " + status);
+    //        alert('Please check your network connectivity!');
+    //        document.getElementById("retryBtn").style.visibility = "visible";
 
 
-        }
+    //    }
 
-        setTimeout(checkNetwork, 1000);
-    }
+    //    setTimeout(checkNetwork, 1000);
+    //}
 
-    checkNetwork();
+    //checkNetwork();
 
     // Retry button
-
     function retryConnect() {
         window.location.reload(true);
     }
+
+    window.addEventListener('load', function () {
+        var status = document.getElementById("status");
+
+        function updateOnlineStatus(event) {
+            var condition = navigator.onLine ? "online" : "offline";
+
+            // might need to remove
+            status.className = condition;
+            status.innerHTML = condition.toUpperCase();
+
+            //log.insertAdjacentHTML("beforeend", "Event: " + event.type + "; Status: " + condition);
+            console.log("Event: " + event.type + "; Status: " + condition);
+
+            if (condition == "offline") {
+                document.getElementById("retryBtn").style.visibility = "visible";
+            } else {
+                document.getElementById("retryBtn").style.visibility = "hidden";
+
+            }
+        }
+
+        window.addEventListener('online', updateOnlineStatus);
+        window.addEventListener('offline', updateOnlineStatus);
+    });
     
 </script>
