@@ -35,11 +35,12 @@ Lastly, the secure url will be used to call the GET method: -
 # Network failure catch:
 ## 1. Online
 ![](images/n1.png)
-Console shows the message, "Online, status:: true", when the network is connected. 
+For debugging purpose, console shows the message, "Online, status: true", when the network is connected. 
 
 ## 2. Offline
 ![](images/n2.png)
-The "Retry" button will be showned to refresh the page and prompt user to check the network connectivity.
+The "Retry" button will be showned at the top right for user to refresh the browser, and a pop-up message prompts user to check the network connectivity. 
+The console shows, "Offline: status: false".
 
 # Sequence Diagrams
 ### 1. Unsecure Talent Search Web API
