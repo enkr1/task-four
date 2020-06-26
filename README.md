@@ -15,11 +15,11 @@ Pang Jing Hui | P1845259
 ![](images/2.png)
 
 # HTTP to HTTPS testing screenshots:
-### I. Access unsecure url
+### 1. Access unsecure url
 ![](images/3.png)
 Try to access unsecure http://...
 
-### II. Automatically redirected to secure url
+### 2. Automatically redirected to secure url
 ![](images/4.png)
 Notice it has been redirected to https://...
 
