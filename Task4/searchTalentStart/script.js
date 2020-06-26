@@ -4,7 +4,7 @@ $('#search').keyup(function () {
     //var urlForJson = "data.json";
 
     //get data from Restful web Service in development environment
-    var urlForJson = "http://localhost:50784/api/talents";
+    var urlForJson = "https://localhost:44330/api/talents";
 
     //get data from Restful web Service in production environment
     //var urlForJson = "https://p1845259-task4.azurewebsites.net/api/talents";
@@ -23,11 +23,12 @@ $('#search').keyup(function () {
 			(val.Bio.search(myExp) != -1)) {
                 output += '<li>';
                 output += '<h2>' + val.Name + '</h2>';
+
                 //get the absolute path for local image
-                output += '<img src="images/'+ val.ShortName +'_tn.jpg" alt="'+ val.Name +'" />';
+                //output += '<img src="images/'+ val.ShortName +'_tn.jpg" alt="'+ val.Name +'" />';
 
                 //get the image from cloud hosting
-                //output += '<img src=' + urlForCloudImage + val.ShortName + "_tn.jpg alt=" + val.Name + '" />';
+                output += '<img src=' + urlForCloudImage + val.ShortName + "_tn.jpg alt=" + val.Name + '" />';
                 output += '<p>' + val.Bio + '</p>';
                 output += '</li>';
             }

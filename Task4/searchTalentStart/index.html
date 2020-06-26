@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="utf-8" />
@@ -6,13 +6,53 @@
 	<link rel="stylesheet" href="mystyle.css" />
 </head>
 <body>
-<div id="searcharea">
-	<label for="search">live search</label>
-	<p>Enter the name or info about a speaker</p>
-	<input type="search" name="search" id="search" placeholder="name or info" />
-</div>
-<div id="update"></div>
-<script src="jquery.js"></script>
-<script src="script.js"></script>
+    <button id="retryBtn" onclick="retryConnect()">RETRY</button>
+    <div id="searcharea">
+        <label for="search">live search</label>
+        <p>Enter the name or info about a speaker</p>
+        <input type="search" name="search" id="search" placeholder="name or info" />
+    </div>
+    <div id="update"></div>
+    <script src="jquery.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
+
+<style>
+    #retryBtn {
+        position: absolute;
+        right: 1%;
+        color: red;
+    }
+</style>
+
+<script>
+    // Network/server failure
+    // https://stackoverflow.com/questions/189430/detect-the-internet-connection-is-offline
+    // https://www.w3schools.com/howto/howto_js_offline_detection.asp
+    
+    function checkNetwork() {
+        var status = navigator.onLine;
+        if (status) {
+            console.log("Online, status: " + status);
+            document.getElementById("retryBtn").style.visibility = "hidden";
+        } else {
+            console.log("Offline, status: " + status);
+            alert('Please check your network connectivity!');
+            document.getElementById("retryBtn").style.visibility = "visible";
+
+
+        }
+
+        setTimeout(checkNetwork, 1000);
+    }
+
+    checkNetwork();
+
+    // Retry button
+
+    function retryConnect() {
+        window.location.reload(true);
+    }
+    
+</script>
